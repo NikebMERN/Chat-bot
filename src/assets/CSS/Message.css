@@ -1,0 +1,126 @@
+.message {
+    display: flex;
+    flex-direction: column; /* Ensures chronological order */
+    gap: 20px; /* Spacing between user and bot messages */
+}
+
+.user-message {
+    display: flex;
+    justify-content: flex-end; /* Aligns user messages to the right */
+    gap: 10px; /* Gap between message bubble and edit icon */
+    position: relative; /* Allows the edit icon to be positioned relative to this container */
+}
+
+.bot-message {
+    display: flex;
+    justify-content: flex-start; /* Aligns bot messages to the left */
+    gap: 10px;
+}
+
+.message-bubble {
+    padding: 10px 15px;
+    border-radius: 15px;
+    max-width: 70%;
+    font-size: 16px;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+.user-bubble {
+    background-color: #007bff;
+    color: white;
+    border-top-right-radius: 0;
+    margin-left: auto; /* Ensures alignment to the right */
+}
+
+.bot-bubble {
+    background-color: #f1f1f1;
+    color: #333;
+    border-top-left-radius: 0;
+}
+
+.edit-icon {
+    position: absolute; /* Relative to the .user-message container */
+    bottom: 5px; /* Adjust vertical position within the user bubble */
+    left: 30px; /* Slight offset from the right edge */
+    font-size: 18px;
+    cursor: pointer;
+    color: #007bff;
+    z-index: 1; /* Ensures it appears above other elements */
+}
+
+.message-edit-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.edit-input {
+    width: 100%;
+    min-height: 60px;
+    max-height: 200px;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #2bf253; /* Match user chat bubble color */
+    color: white; /* White text for contrast */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    resize: vertical; /* Allows resizing vertically but not horizontally */
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-family: "Arial", sans-serif;
+}
+
+.edit-input:focus {
+    border-color: #0056b3; /* Slightly darker blue for focus */
+    box-shadow: 0px 0px 8px rgba(0, 91, 179, 0.5);
+}
+
+.edit-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.save-button, .cancel-button {
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.save-button {
+    background-color: #28a745;
+}
+
+.save-button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+.cancel-button {
+    background-color: #dc3545;
+}
+
+.cancel-button:hover {
+    background-color: #c82333;
+    transform: translateY(-2px);
+}
+
+/* Bot Code Message Styling */
+.bot-code {
+    background-color: #f5f5f5;
+    font-family: "Courier New", Courier, monospace;
+    padding: 10px;
+    white-space: pre-wrap; /* Preserve whitespace */
+    overflow-x: auto; /* Enable horizontal scrolling for long code lines */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #333;
+}

@@ -1,0 +1,153 @@
+.sidebar {
+    width: 300px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #f7f7f8;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #ddd;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar.dark-mode {
+    background-color: #121212;
+    color: #f7f7f8;
+}
+
+.sidebar-header {
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.mode-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sun-icon,
+.moon-icon {
+    font-size: 1.5rem;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: #e1e1e1;
+    border-radius: 5px;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    background: transparent;
+    flex-grow: 1;
+    font-size: 1rem;
+}
+
+.search-bar.dark-mode {
+    background-color: #333;
+    color: #f7f7f8;
+}
+
+.chat-list {
+    padding: 10px;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+.sidebar .chat-item {
+    background-color: var(--button-bg);
+    /* Use theme-based background */
+    color: var(--button-text);
+    /* Theme-based text color */
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 5px 0;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar .chat-item:hover {
+    background-color: var(--button-hover-bg);
+    /* Theme-based hover background */
+    color: var(--button-hover-text);
+    /* Theme-based hover text */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.sidebar .chat-item:active {
+    background-color: var(--button-active-bg);
+    /* Theme-based active background */
+    color: var(--button-active-text);
+    /* Theme-based active text */
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.chat-item:hover {
+    background-color: #ddd;
+}
+
+.sidebar.dark-mode .chat-item {
+    background-color: #333;
+    color: #f7f7f8;
+}
+
+.sidebar.dark-mode .chat-item:hover {
+    background-color: #444;
+}
+
+/* General styling for the Add icon */
+.add-icon {
+    cursor: pointer;
+    margin-left: 120px;
+    font-size: 1.8rem;
+    border-radius: 50%;
+    padding: 6px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Light mode styles */
+.light-mode .add-icon {
+    color: #4caf50; /* Green */
+    background-color: #e8f5e9; /* Light green background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.light-mode .add-icon:hover {
+    color: #ffffff; /* White on hover */
+    background-color: #388e3c; /* Darker green on hover */
+    transform: scale(1.2); /* Slight zoom effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Dark mode styles */
+.dark-mode .add-icon {
+    color: #90caf9; /* Light blue */
+    background-color: #1e88e5; /* Blue background */
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode .add-icon:hover {
+    color: #0d47a1; /* Darker blue on hover */
+    background-color: #bbdefb; /* Light blue background */
+    transform: scale(1.2); /* Slight zoom effect */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+}
+
